@@ -1,0 +1,11 @@
+IoC -> Inversion of control
+    -> It is a principle in which spring will control logic of our application
+       There are two main ways in IOC is divided
+       1. DI  -> Dependency Injection -> Control is about dependencies in between the objects
+       2. AoP/ Interceptors -> Aspect oriented Programming -> Intercepting and controlling methods execution
+          breaking of code into different modules, also known as modularisation, where the aspect is the key unit of modularity.
+          Aspects enable the implementation of crosscutting concerns such as- transaction, logging not central to business logic
+          without cluttering the code core to its functionality. It does so by adding additional behaviour that is the advice to
+          the existing code.
+
+Context -> The place where you put object instances that you allow spring to be managed
