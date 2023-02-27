@@ -28,6 +28,15 @@ Approaches to use context ->
        b. We cannot create the beans of classes which are part of external dependencies
 
 
+---------------------------------------------------------------------------------------------------------------------------
+
+Controllers -> controllers are objects offering entry to the application , It is a layer which offers you entry point to
+               the logic which is written in service layer
+
+Service     -> service layer is objects implementing the use-cases which is business logic, services are define algorithm
+               which happens to the data
+
+
 
 
 
