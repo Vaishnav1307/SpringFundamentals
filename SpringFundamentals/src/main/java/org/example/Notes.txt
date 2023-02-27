@@ -17,11 +17,16 @@ Approaches to use context ->
     -> When you manually defined the bean the name of the method will be taken as the name of that instance
        If you are creating two or more beans of same type then you need to specify name of instance context should
        provide you in getBean constructor, or it will give an exception
+       a. We can create the beans of classes which are part of jdk
+       b. We can create the beans of classes which are part of external dependencies
 
     2. By using stereotype annotations
     -> The annotation used for creating beans is @Component annotation it is a class level annotation which is given above
        the class of which bean you wanted and @ComponentScan annotation is used with it which is specified above the configuration
        class and inside @ComponentScan annotation basePackage is also specified
+       a. We cannot create the beans of classes which are part of jdk
+       b. We cannot create the beans of classes which are part of external dependencies
+
 
 
 
