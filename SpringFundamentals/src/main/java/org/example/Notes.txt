@@ -9,3 +9,22 @@ IoC -> Inversion of control
           the existing code.
 
 Context -> The place where you put object instances that you allow spring to be managed
+           1. The spring context is like a bucket where you have all your instances stored which have unique identifiers
+              and sometime aliases also
+
+Approaches to use context ->
+    1. manually defining bean with @Bean annotation
+    -> When you manually defined the bean the name of the method will be taken as the name of that instance
+       If you are creating two or more beans of same type then you need to specify name of instance context should
+       provide you in getBean constructor, or it will give an exception
+
+    2. By using stereotype annotations
+    -> The annotation used for creating beans is @Component annotation it is a class level annotation which is given above
+       the class of which bean you wanted and @ComponentScan annotation is used with it which is specified above the configuration
+       class and inside @ComponentScan annotation basePackage is also specified
+
+
+
+
+
+
