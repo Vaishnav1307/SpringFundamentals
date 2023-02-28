@@ -19,8 +19,10 @@ Approaches to use context ->
        provide you in getBean constructor, or it will give an exception
        a. We can create the beans of classes which are part of jdk
        b. We can create the beans of classes which are part of external dependencies
+       - If you are creating two beans of same type then it is mandatory to specify which bean instance you want with
+         @Primary or @Qualifier annotation
 
-    2. By using stereotype annotations
+    2. By using stereotype annotations ( @Component and @ComponentScan )
     -> The annotation used for creating beans is @Component annotation it is a class level annotation which is given above
        the class of which bean you wanted and @ComponentScan annotation is used with it which is specified above the configuration
        class and inside @ComponentScan annotation basePackage is also specified
@@ -35,6 +37,29 @@ Controllers -> controllers are objects offering entry to the application , It is
 
 Service     -> service layer is objects implementing the use-cases which is business logic, services are define algorithm
                which happens to the data
+
+--------------------------------------------------------------------------------------------------------------------------
+
+Approaches to use dependency injection
+
+1. @Autowired  -> - By placing this annotation above the declaration of object we told spring to put instance of
+                    declared object which is created in context inside that attribute
+                  - It injects the dependency of declared object into the class where it is declared. It is necessary that
+                    bean of class which dependency you wanted to be injects should be present in context
+                    [Autowired on actual fields is not recommended because it implies you attribute which is not final
+                    you cannot apply final in front of @Autowired annotation ]
+
+2. @RequiredArgsConstructor or through constructor dependency injection ->
+    - we can use final keyword before the object declaration because final objects are loaded at the time of class loading
+      and cannot be changed after class loading for this we can either use @RequiredArgsConstructor or manually write
+      constructor which will return object
+
+
+
+
+
+
+
 
 
 
