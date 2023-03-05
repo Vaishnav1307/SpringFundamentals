@@ -42,17 +42,31 @@ Service     -> service layer is objects implementing the use-cases which is busi
 
 Approaches to use dependency injection
 
-1. @Autowired  -> - By placing this annotation above the declaration of object we told spring to put instance of
-                    declared object which is created in context inside that attribute
-                  - It injects the dependency of declared object into the class where it is declared. It is necessary that
-                    bean of class which dependency you wanted to be injects should be present in context
-                    [Autowired on actual fields is not recommended because it implies you attribute which is not final
-                    you cannot apply final in front of @Autowired annotation ]
+1. @Autowired  ->
+    - By placing this annotation above the declaration of object we told spring to put instance of
+      declared object which is created in context inside that attribute
+    - It injects the dependency of declared object into the class where it is declared. It is necessary that
+      bean of class which dependency you wanted to be injects should be present in context
+    - We can change the value of attribute after the declaration
+      [Autowired on actual fields is not recommended because it implies you attribute which is not final
+       you cannot apply final in front of @Autowired annotation]
 
-2. @RequiredArgsConstructor or through constructor dependency injection ->
+2. @RequiredArgsConstructor or through constructor dependency injection (Recommended) ->
     - we can use final keyword before the object declaration because final objects are loaded at the time of class loading
       and cannot be changed after class loading for this we can either use @RequiredArgsConstructor or manually write
       constructor which will return object
+    - We cannot change the value of attribute after the declaration
+    - after spring 5 you don't need to use @autowired annotation above the declared constructor but it works only if you
+      have only one constructor if you have more than one constructor you need to specify it explicitly.
+
+3. Getter and Setter ->
+    - we can inject dependency through getters and setters also
+    - but it also not recommended because if you can set the attribute it means you are changing its value
+    - and here instead of using autowired annotation above the attribute declaration you use it above the setters
+
+
+
+
 
 
 
