@@ -1,3 +1,6 @@
+
+SPRING -->
+
 IoC -> Inversion of control
     -> It is a principle in which spring will control logic of our application
        There are two main ways in IOC is divided
@@ -93,13 +96,13 @@ Circular dependency ->
 B. Aspects -> - An aspect is a class that contains logic that will be executed when specific methods are called
               - It is a piece of logic that can stay in between the caller and the object that has been called and can
                 alter the execution
-              - for it, we need to annotate class with @Aspect annotation, and it won't work unless you create the bean of it
-                into context, and you have to enable it by giving @EnableAspectsJAutoProxy annotation
+              - for it, we need to annotate class with @Aspect annotation, and it won't work unless you create the bean
+                of it into context, and you have to enable it by giving @EnableAspectsJAutoProxy annotation
               - when you called the aspect for any perticuler class instead of getting the real object for that class
                 you will get the proxy of that object which is like wrapper over that object which is generated dynamically
                 and aspect is presented in between the proxy of object and caller
-              - there are some joined points like @Before, @After, @AfterReturning, @AfterThrowing, @Around which will joined
-                that logic to that perticuler method
+              - there are some joined points like @Before, @After, @AfterReturning, @AfterThrowing, @Around which will
+                joined that logic to that perticuler method
                 @Before - before the method execution
                 @After - after the method execution
                 @AfterReturning - If method is returning something after that
@@ -107,14 +110,27 @@ B. Aspects -> - An aspect is a class that contains logic that will be executed w
                 @Around - To completely wrap the method execution It should be last approach It works for any of four above
                           - for around you have to take ProceedingJoinPoint class object as a input parameter , so you have
                             to call proceed() method of proceedingJointPoint object and the code written before the proceed
-                            method will be get executed before the execution of called method and code written after the call to the
-                            proceed method will be conducted after the execution of called method.
+                            method will be get executed before the execution of called method and code written after the call
+                            to the proceed method will be conducted after the execution of called method.
 
 
+------------------------------------------------------------------------------------------------------------------------
 
+Singleton and prototype bean ->
+    1. Singleton bean ->
+       - In this type only one instance of object is created and provided it again and again
+       - Singleton bean is different from singleton design pattern
+       - It is a default scope of a spring
 
+    2. Prototype bean ->
+       - If we want new instance of an object everytime at that time we can use prototype bean
+       - we can change the scope by using @Scope annotation which is used above the class of which
+         instance we wanted
 
+------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------
 
+SPRING BOOT -->
 
 
 
