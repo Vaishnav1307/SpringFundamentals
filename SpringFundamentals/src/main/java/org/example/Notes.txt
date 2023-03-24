@@ -131,6 +131,7 @@ Singleton and prototype bean ->
 ------------------------------------------------------------------------------------------------------------------------
 
 SPRING BOOT -->
+    Convention over configuration
 
 
 
