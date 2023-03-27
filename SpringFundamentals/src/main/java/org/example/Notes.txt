@@ -132,6 +132,18 @@ Singleton and prototype bean ->
 
 SPRING BOOT -->
     Convention over configuration
+    The main feature of springBoot application is Auto-configuration
+    It has the embedded tomcat server inside the springBoot application
+
+------------------------------------------------------------------------------------------------------------------------
+
+HTTP -> HTTP is a protocol which can be used by any platform
+
+------------------------------------------------------------------------------------------------------------------------
+
+Spring Rest ->
+
+
 
 
 
